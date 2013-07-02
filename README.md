@@ -1,4 +1,0 @@
-SystemSettings
-==============
-
-ComputerTerminalSettings
