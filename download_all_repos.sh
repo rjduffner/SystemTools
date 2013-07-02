@@ -6,8 +6,6 @@
 #
 
 curl https://github.com/rjduffner?tab=repositories | perl -nle 'print "$2" if /(<a href=.*rjduffner\/(.*)">.*<\/a>)/' >project_list.txt
-#curl http://code.corp.surveymonkey.com/QA | perl -nle 'print "$2" if /(<a href=.*QA\/(.*)">.*<\/a>)/' >project_list.txt
-for project in $(cat project_list.txt)
 do
   echo $project
   if [ ! -d $project/.git ]; then
