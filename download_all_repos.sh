@@ -19,6 +19,7 @@ do
     fi
     git clone $GITURL$GITUSER/$project.git
   else
-    git --git-dir=$project/.git --work-tree=$project fetch
+    #git --git-dir=$project/.git --work-tree=$project fetch
+    git --git-dir=$project/.git --work-tree=$project pull
   fi
 done
