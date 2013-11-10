@@ -1,0 +1,23 @@
+syntax on
+set number
+
+set history=800
+filetype on
+filetype plugin on
+filetype indent on
+
+colorscheme desert
+
+set nobackup
+set nowb
+set noswapfile
+
+set expandtab
+set smarttab
+
+
+set tabstop=4
+set shiftwidth=4
+
+
+set wrap

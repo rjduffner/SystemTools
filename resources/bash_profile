@@ -1,0 +1,11 @@
+alias ll='ls -al'
+alias lb='cd ..;ls'
+alias text='subl'
+
+alias apacheon='sudo apachectl start'
+alias apacheoff='sudo apachectl stop'
+alias apacherestart='sudo apachectl restart'
+
+
+
+#export LD_LIBRARY_PATH=/Users/rjduffner/Code/FileGDB_API/lib/
