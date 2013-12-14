@@ -8,16 +8,37 @@ filetype indent on
 
 colorscheme desert
 
+set wildmode=list:longest  "Change tab completion to be like Bash's
+set wildignore=*.o,*.obj,*~,*.swp,*.pyc "Files to ignore on auto complete
+
+
+""""""""""""""""""""""""
+" Files, backups, and undo
+""""""""""""""""""""""""
+" what do we need these for any more in an era of TimeMachine and source servers?
 set nobackup
 set nowb
 set noswapfile
 
+""""""""""""""""""""""""
+" Text, tab, and indent related
+"""""""""""""""""""""""
+" Use spaces instead of tabs
 set expandtab
+
 set smarttab
 
-
+"1 tab == 4 spaces, we all agree on that now
 set tabstop=4
 set shiftwidth=4
 
+set wrap "go ahead and wrap lines, we can always turn it off later
 
-set wrap
+map <F11> :NERDTree<cr>
+autocmd FileType python call AutoCmd_python()
+
+fun! AutoCmd_python()
+        "setlocal other options for python, then:
+    nnoremap <buffer> <F12> :exec '!python' shellescape(@%, 1)<cr>
+
+endf
