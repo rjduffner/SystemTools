@@ -1,4 +1,4 @@
 iterm
 vagrant
 homebrew
-
+flux
