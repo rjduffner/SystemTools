@@ -1,11 +1,11 @@
 [user]
-	name = Robert Duffner
+	name = rjduffner
 	email = rjduffner@gmail.com
 [credential]
 	helper = osxkeychain
 [core]
-	editor = mvim -f
-	excludesfile = /Users/robertduffner/.gitignore_global
+    editor = mvim -f
+	excludesfile = /Users/rjduffner/.gitignore_global
 [merge]
     tool = vimdiff
 [color]
@@ -24,7 +24,6 @@
     added = yellow
     changed = green
     untracked = cyan
-
 [alias]
     st = status
     ci = commit

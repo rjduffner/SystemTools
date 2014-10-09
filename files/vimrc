@@ -1,3 +1,6 @@
+execute pathogen#infect()
+
+
 syntax on
 set number
 
@@ -5,6 +8,9 @@ set history=800
 filetype on
 filetype plugin on
 filetype indent on
+
+set encoding=utf-8
+scriptencoding utf-8
 
 colorscheme desert
 
@@ -25,7 +31,6 @@ set noswapfile
 """""""""""""""""""""""
 " Use spaces instead of tabs
 set expandtab
-
 set smarttab
 
 "1 tab == 4 spaces, we all agree on that now
