@@ -5,6 +5,10 @@
 #
 ##################################
 
+# Set Up Path
+#
+export PATH=/usr/local/bin:$PATH
+
 # Set Up Colors
 #
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
@@ -32,10 +36,13 @@ source /usr/local/bin/virtualenvwrapper.sh
 #
 export PYTHONDONTWRITEBYTECODE=1
 
+# Env Variables
+#
+export API_KEYS=$HOME/keys
 
 # SM Commands
 #
-alias decache_user='function _decache_user(){ curl -X POST http://mt1-svc01:555/decache/user/ -d "userid=$1"; };_decache_user'
+alias decache_user='function _decache_user(){ curl -X POST http://mt1-svc01.corp.surveymonkey.com:555/decache/user/ -d "userid=$1"; };_decache_user'
 
 # SM Env Variables
 #
