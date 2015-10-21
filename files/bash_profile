@@ -46,5 +46,9 @@ alias decache_user='function _decache_user(){ curl -X POST http://mt1-svc01.corp
 
 # SM Env Variables
 #
-export REPORTING_SPLUNK=$HOME
+export REPORTING_SPLUNK=$HOME/SurveyMonkey/QA/reports
+export REPORTING=$HOME/SurveyMonkey/QA/reports
 export QASRC=$HOME/SurveyMonkey/QA/src
+
+# MT3 export DOTNET_HOST=192.168.4.63
+export DOTNET_HOST=192.168.120.77
