@@ -4,17 +4,7 @@
 ############################
 
 # Variables
-dir=~/dotfiles/files
 filepaths="$@"
-hostname=`hostname -s`
-username=`whoami`
-
-# create dotfiles_old in homedir
-if [ ! -d "$olddir" ]; then
-    echo -n "Creating $olddir for backup of any existing dotfiles in ~ ... "
-    mkdir -p $olddir
-    echo "done"
-fi
 
 for filepath in $filepaths; do
     filename=$(basename $filepath)
