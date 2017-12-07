@@ -1,0 +1,32 @@
+127.0.0.1 localhost
+
+192.168.21.254 smstack
+
+127.0.0.1 localmonkey.com
+127.0.0.1 localmonkey.net
+127.0.0.1 www.localmonkey.com
+127.0.0.1 www.localmonkey.net
+
+127.0.0.1 de.localmonkey.com
+127.0.0.1 de.localmonkey.net
+
+127.0.0.1 google.localmonkey.com
+127.0.0.1 google.localmonkey.com
+
+127.0.0.1 facebook.localmonkey.net
+127.0.0.1 facebook.localmonkey.net
+
+10.0.0.100 mt3-usersvc-vip
+10.0.0.100 mt3-emailsvc-vip
+10.0.0.100 mt3-messagingsvc-vip
+10.0.0.100 mt3-notificationsvc-vip
+
+10.0.0.100 mt3-usersvc-vip.corp.surveymonkey.com
+10.0.0.100 mt3-emailsvc-vip.corp.surveymonkey.com
+10.0.0.100 mt3-messagingsvc-vip.corp.surveymonkey.com
+10.0.0.100 mt3-notificationsvc-vip.corp.surveymonkey.com
+
+
+# BEGIN section for OpenVPN Client SSL sites
+127.94.0.1	client.openvpn.net
+# END section for OpenVPN Client SSL sites

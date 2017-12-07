@@ -1,8 +1,5 @@
 execute pathogen#infect()
 
-set lines=50
-set columns=130
-
 syntax on
 set number
 

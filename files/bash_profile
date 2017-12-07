@@ -7,13 +7,32 @@
 
 # Set Up Path
 #
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    source $(brew --prefix)/etc/bash_completion
+    source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
+fi
 
 # Set Up Colors
 #
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+MAGENTA="\[\033[0;35m\]"
+YELLOW="\[\033[0;33m\]"
+BLUE="\[\033[34m\]"
+LIGHT_GRAY="\[\033[0;37m\]"
+CYAN="\[\033[0;36m\]"
+GREEN="\[\033[0;32m\]"
+BOLDGREEN="\[\033[1;32m\]"
+NO_COLOUR="\[\033[0m\]"
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUPSTREAM="auto"
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]${BOLDGREEN}\$(__git_ps1 \" [%s]\")${NO_COLOUR} "
+#export PS1="${BOLDGREEN}\$(__git_ps1 \"[%s]\")\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\034[m\]\$ "
+
 export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
+#export LSCOLORS=GxFxCxDxBxegedabagaced
+export LSCOLORS=CxBxExExBxDxDxBxBxDxDx
 
 # Set Up Commands
 #
@@ -21,20 +40,22 @@ alias ls='ls -GFh'
 alias ll='ls -al'
 alias lb='cd ..;ls'
 alias text='subl'
-alias FUCKYOUECLIPSE='/Applications/eclipse/eclipse -clean'
 
-alias apacheon='sudo apachectl start'
-alias apacheoff='sudo apachectl stop'
-alias apacherestart='sudo apachectl restart'
+
+# Java and DALs
+alias FUCKYOUECLIPSE='/Applications/eclipse/eclipse -clean'
+alias stopdal='/usr/local/Cellar/tomcat@7/7.0.79/bin/catalina stop'
+alias startdal='/usr/local/Cellar/tomcat@7/7.0.79/bin/catalina start'
+alias restartdal='stopdal && startdal'
+
+alias refreshdal='sudo rm -f /usr/local/Cellar/tomcat@7/7.0.79/libexec/webapps/Billing.war && sudo rm -rf /usr/local/Cellar/tomcat@7/7.0.79/libexec/webapps/Billing && cp ~/SurveyMonkey/billingdal/dist/Billing.war /usr/local/Cellar/tomcat@7/7.0.79/libexec/webapps/'
+
+
 
 # Set Up VirtualEnv Wrapper
 #
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
-
-# Turn off pyc creation
-#
-export PYTHONDONTWRITEBYTECODE=1
 
 # Env Variables
 #
